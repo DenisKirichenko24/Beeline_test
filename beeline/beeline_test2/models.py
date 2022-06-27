@@ -1,13 +1,10 @@
 from django.core.files.storage import FileSystemStorage
 from django.db import models
 
-# fs = FileSystemStorage(location='/media')
 
 class ExcelModel(models.Model):
     file = models.FileField(upload_to='')
 
-
-# посмотреть конфиг из видоса или репы
 config = {'conn':'hive'}
 class Service(models.Model):
     name = models.CharField(max_length=128, default="Hive-example")
