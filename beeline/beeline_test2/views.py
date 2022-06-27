@@ -25,11 +25,11 @@ class UploadView(generic.TemplateView):
                 upload = request.FILES['file']
                 fss = FileSystemStorage('media/docs')
                 fss.save(upload.name, upload)
-                post_team()
-                post_db_service()
-                post_database()
-                post_db_schema()
-                post_db_table()
+                post_team(request)
+                post_db_service(request)
+                post_database(request)
+                post_db_schema(request)
+                post_db_table(request)
             return render(request, 'ty.html')
         return render(request, 'index.html')
 
