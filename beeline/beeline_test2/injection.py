@@ -14,7 +14,7 @@ import requests
 # json_str = excel_data_df.to_dict(orient='records')
 
 
-def post_team(*args, **kwargs):
+def post_team():
     excel_data_df = pd.read_excel('beeline/media/docs/assignment.xlsx',sheet_name='Tables')
     excel_data_df.to_csv(r'beeline/media/docs/assignment.csv', index = False, header=True)
     team_data = pd.read_csv("beeline/media/docs/assignment.csv")
@@ -27,7 +27,7 @@ def post_team(*args, **kwargs):
     return request
 
 
-def post_db_service(*args, **kwargs):
+def post_db_service():
     excel_data_df = pd.read_excel('beeline/media/docs/assignment.xlsx',sheet_name='Tables')
     excel_data_df.to_csv(r'beeline/media/docs/assignment.csv', index = False, header=True)
     service_data = pd.read_csv('beeline/media/docs/assignment.csv')
@@ -40,7 +40,7 @@ def post_db_service(*args, **kwargs):
     return request
 
 
-def post_database(*args, **kwargs):
+def post_database():
     request_service_id = requests.get("http://localhost:8585/api/v1/services/databaseServices/name/Hive-example")
     val = request_service_id.json()
     val_id = val["id"]
@@ -52,7 +52,7 @@ def post_database(*args, **kwargs):
     return request
 
 
-def post_db_schema(*args, **kwargs):
+def post_db_schema():
     request_db_id = requests.get("http://localhost:8585/api/v1/databases/name/Hive-example.Hive-db")
     val_bd = request_db_id.json()
     val_bd_id = val_bd["id"]
@@ -67,7 +67,7 @@ def post_db_schema(*args, **kwargs):
     return request
 
 
-def post_db_table(*args, **kwargs):
+def post_db_table():
     tables_list = pd.read_excel('beeline/media/docs/assignment.xlsx',sheet_name='Fields')
     table = pd.read_excel('beeline/media/docs/assignment.xlsx',sheet_name='Tables')
     tables_columns = tables_list.columns.values
@@ -83,8 +83,8 @@ def post_db_table(*args, **kwargs):
     return request
 
 
-post_team()
-post_db_service()
-post_database()
-post_db_schema()
-post_db_table()
+# post_team()
+# post_db_service()
+# post_database()
+# post_db_schema()
+# post_db_table()
