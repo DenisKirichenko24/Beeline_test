@@ -1,0 +1,7 @@
+{
+    "database":{
+        "id": "string",
+        "type": "database"
+    },
+    "name":"str"
+}

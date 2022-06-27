@@ -1,0 +1,8 @@
+{
+    "name": "Hive-db",
+    "service":
+    {
+    "id": "88ae0532-1bf8-4575-8086-69d6b2082447",
+    "type": "databaseService"
+    }
+}

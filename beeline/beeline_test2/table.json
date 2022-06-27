@@ -1,0 +1,8 @@
+{
+    "columns":{
+        "name": "string",
+        "dataType": "DECIMAL"
+    },
+    "name": "string", 
+    "description": "str"
+}

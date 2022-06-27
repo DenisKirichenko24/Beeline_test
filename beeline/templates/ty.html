@@ -1,0 +1,14 @@
+<html>
+    <title>Download File</title>
+</head>
+<body>
+<enter>
+   <h1>Thanks a lot!</h1>
+   <form enctype="multipart/form-data" method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</enter>
+</body>
+</html>

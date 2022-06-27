@@ -1,0 +1,7 @@
+{
+    "connection": {
+        "config":{}
+            },
+    "name": "string",
+    "serviceType": "Hive"
+}
