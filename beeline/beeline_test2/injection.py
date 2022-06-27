@@ -80,12 +80,11 @@ def post_db_table(*args, **kwargs):
     json_tables["name"] = table_name
     json_tables["description"] = table_desc
     request = requests.post("http://localhost:8585/api/v1/tables", json=json_tables)
-    print(request.json())
     return request
 
 
-# post_team()
-# post_db_service()
-# post_database()
-# post_db_schema()
-# post_db_table()
+post_team()
+post_db_service()
+post_database()
+post_db_schema()
+post_db_table()

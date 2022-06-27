@@ -22,6 +22,10 @@ class UploadView(generic.TemplateView):
     def injection(self,request, pk):
         file = get_object_or_404(ExcelModel, pk=pk)
         post_team(file)
+        post_db_service(file)
+        post_database(file)
+        post_db_schema(file)
+        post_db_table(file)
         return render(request, 'inj.html')
 
 
